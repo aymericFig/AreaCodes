@@ -1,6 +1,6 @@
 var codesPostaux = require('codes-postaux');
 
-var messageConseilReponse = "Entrez un code postal sous format 75000, prenez en compte l'arrondissement";
+var messageConseilReponse = "Entrez un code postal sous format 75001, prenez en compte l'arrondissement";
 
 exports.get = function(req, res){
 		res.render('index',{messageConseil: messageConseilReponse, retourCP:""}, function(err, html){
