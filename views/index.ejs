@@ -9,16 +9,18 @@
     </head>
 
     <body>
-        
-		<div class="jumbotron" >
-			<p style="text-align: center"> Entrez votre code postal, nous faisons le reste ! </p>
-			<form action="/" method="post" style="text-align: center; margin-bottom: 10px;" >
-				<input type="text" name="pc">
-				<input type="submit" style="text-align: center">
+		<div class="jumbotron" style="background-color: #CCCCCC; width: 80%; margin-left: auto; margin-right:auto;" >
+			<p style="text-align: center; background-color: grey; border-radius:4px; border:2px dashed #333333; width: 50%; margin-left: auto; margin-right: auto; color:white;"> Entrez votre code postal, nous faisons le reste ! </p>
+			<form action="/" method="post" style="text-align: center; margin-bottom: 10px;" class="form-inline" >
+				<label for="pc">Code Postal:</label>
+				<input class="form-control" type="text" name="cp">
+				<input type="submit" style="text-align: center" class="btn btn-default">
 			</form>
 			<p style="text-align: center">
-				<%= test %>
-			
+				<%= messageConseil %>
+			</p>
+			<p style="text-align: center">
+				<%= retourCP %>
 			</p>
 		</div>
 		
