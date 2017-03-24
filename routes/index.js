@@ -1,6 +1,6 @@
 var codesPostaux = require('codes-postaux');
 
-var messageConseilReponse = "Entrez un code postal sous format 75001, prenez en compte l'arrondissement";
+var messageConseilReponse = "Entrez le sous format 75001, prenez en compte l'arrondissement";
 
 exports.get = function(req, res){
 		res.render('index',{messageConseil: messageConseilReponse, retourCP:""}, function(err, html){
@@ -12,7 +12,7 @@ exports.get = function(req, res){
 exports.post = function(req, res){
 		var cp = codesPostaux.find(req.body.cp)
 		if(!cp[0]){
-			res.render('index',{messageConseil: messageConseilReponse, retourCP: "Vous n'avez pas correctement tapper le code postal"}, function(err, html){
+			res.render('index',{messageConseil: messageConseilReponse, retourCP: "CP incorrect"}, function(err, html){
 				res.send(html);
 			});
 			
